@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PseudoElement</title>
+    <style>
+        #p1{
+            background-color: aliceblue;
+        }
+        #p1::first-letter{
+            color : red;
+            font-size: 40px;
+        }
+
+        #p1::first-line{
+            color : rgb(13, 61, 218);
+        }
+        #p2::after{
+            content: "😊😊";
+        }
+        #p2::before{
+            content: "😂😂";
+        }
+        #p1::selection{
+            background-color: yellowgreen;
+        }
+        ::marker{
+            color: blueviolet;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pseudo Element</h1>
+    <hr>
+    <p>It is used to add style to the spacific part of an element based on its state</p>
+    <p>It indicates with :: (double colon)</p>
+    <hr>
+
+    
+    <p id="p1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem facere repellendus consequatur officia, recusandae nesciunt corrupti suscipit? Sit recusandae praesentium facilis. Nemo, officiis! Consequuntur, rem magnam blanditiis fugit nisi ipsum? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore deserunt deleniti nihil cupiditate doloribus maxime laboriosam maiores quas saepe, facilis odit hic numquam enim dicta assumenda quaerat ad perspiciatis ducimus!laboriosam</p>
+    <p id="p2">This is the content</p>
+
+    <ol>
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+    </ol>
+
+</body>
+</html>
