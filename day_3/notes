@@ -1,0 +1,139 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+what is css
+
+css-cascading style sheet
+   -used to style/design web pages
+   -to apply css to an element we need to use style attribute
+
+how to use css(internal,external and inline)
+1.Inline css
+     syntax:
+     <p style ="property:value;property:value2;">content</p>
+  -used to style specific element
+
+2.Internal Css
+   syntax:
+
+   <style>
+    selector{
+        property:value;
+        property:value2
+    }
+    </style>
+-used to  style multiple elements
+
+3.external css
+---create a css file with .css extension
+---link the css file to the html file
+--- used to style multiple pages (large scale projects)
+
+syntax:
+<html>
+<head>
+   <link rel="stylesheet" href="filename.css">
+</head>
+
+</html>
+
+
+
+inline css>internal css>external css
+
+---------------------------------------------
+what is margin
+  
+  the space around the border
+  -margin attribute
+  syntax:
+
+  h1{
+    margin:20px(all sides top bottom left right)
+    margin:20px(top/bottom) 15px(left/right)
+    margin:10px(top),20px(right),30px(bottom),40px(left)
+
+    margin-top:
+    margin-bottom:
+    margin-left:
+    margin-right:
+
+    shorthand:
+    margin:top,right,bottom,left
+  }
+
+  ----------------------------------------
+  what is padding
+
+   --- the space around the content
+   --padding attribute
+
+syntax:
+h1{
+    padding:20px(all sides top bottom left right)
+    padding:20px(top/bottom) 15px(left/right)
+    padding:10px(top),20px(right),30px(bottom),40px(left)
+
+    padding-top:
+    padding-bottom:
+    padding-right:
+    padding-left:
+
+shorthand:
+    padding:top,right,bottom,left
+  }
+-------------------------------------------------
+border:
+--border attribute
+
+syntax:
+h1{
+
+    border-style:
+    border-color:
+    border-size:
+
+    border:size(thicknes) style color(all sides)
+
+    border-top:
+    border-bottom:
+    border-left:
+    border-right:
+    border-radius:for rounded corner;
+}
+
+style:
+1.solid
+2.dotted
+3.double
+4.dashed
+5:groove
+6.ridge
+7:inset
+8.outset
+
+----------------------------------------------------
+Box model in css
+ 
+  It describes how elements are structured and spaced in a web page
+
+  structure:
+
+  content-(text/image/video)
+  ---->padding(space around the content)
+  ----->border(outline around the content)
+  ----->margin(space outside the border,it helps to separates elements)
+
