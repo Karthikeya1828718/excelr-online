@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex1</title>
+    <style>
+        .parent{
+            height: 600px;
+            border: 1px solid red;
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* main axia */
+            align-items: flex-end;  /* cross axis */
+
+        }
+        .child{
+            height: 100px;
+            width: 100px;
+            font-size: 40px;
+        }
+        .one{
+            background-color: aqua;
+        }
+        .two{
+            background-color: red;
+        }
+        .three{
+            background-color: greenyellow;
+        }
+        .four{
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Flex Task</h1>
+    <hr>
+    <p>It is used to aligin elements</p>
+    <p>It is used to distribute the space between elements</p>
+    <p>It is used to distribute the space around elements</p>
+    <p>It will arrange elemnents in cross axis and main axis</p>
+    <p>flex container is main division of flex</p>
+    <p>flex items are child of flex container</p>
+    <p>flex container is used to wrap the flex items</p>
+    <p>"display : flex;" is used to make flex container</p>
+    <p>the default direction s row(left to right) </p>
+    <p>"flex-direction : row-reverse; row; column; column-reverse" is used to chnage the direction</p>
+
+    <p></p>
+    <p></p>
+    <p></p>
+
+    <hr>
+
+    <div class="parent">
+        <div class="child  one">1</div>
+        <div class="child  two">2</div>
+        <div class="child  three">3</div>
+        <div class="child  four">4</div>
+    </div>
+</body>
+</html>

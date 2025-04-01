@@ -1,0 +1,15 @@
+ <h1>Flex Task</h1>
+    <hr>
+    <p>It is used to aligin elements</p>
+    <p>It is used to distribute the space between elements</p>
+    <p>It is used to distribute the space around elements</p>
+    <p>It will arrange elemnents in cross axis and main axis</p>
+    <p>flex container is main division of flex</p>
+    <p>flex items are child of flex container</p>
+    <p>flex container is used to wrap the flex items</p>
+    <p>"display : flex;" is used to make flex container</p>
+    <p>the default direction s row(left to right) </p>
+    <p>"flex-direction : row-reverse; row; column; column-reverse" is used to chnage the direction</p>
+
+
+    row(left)
