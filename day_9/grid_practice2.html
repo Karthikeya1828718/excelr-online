@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid practice 2</title>
+    <style>
+        .container{
+            min-height: 100vh; 
+            display: grid;
+            grid-template-areas: " header header"
+                                    " content  section1"
+                                    "content  section2"
+                                    "footer  footer";
+            
+        }
+        .child{
+            font-size: 40px;
+            text-align: center;
+            align-content: center;
+            margin: 5px;
+            border-radius: 20px;
+            border: 2px solid black;
+        }
+        .head{
+            background-color: aqua;
+            grid-area: header;
+        }
+        .content{
+            background-color: rgb(120, 12, 252);
+            grid-area: content;
+        }
+        .sec1{
+            background-color: rgb(12, 16, 223);
+            grid-area: section1;
+        }
+        .sec2{
+            background-color: rgb(220, 89, 24);
+            grid-area: section2;
+        }
+        .foot{
+            background-color: rgb(187, 17, 213);
+            grid-area: footer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="child head">header</div>
+        <div class="child content">content</div>
+        <div class="child sec1">section 1</div>
+        <div class="child sec2">section 2</div>
+        <div class="child foot">footer</div>
+    </div>
+</body>
+</html>
