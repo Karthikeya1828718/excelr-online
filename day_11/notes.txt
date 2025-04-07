@@ -1,0 +1,58 @@
+Css Positions:
+
+    1.static
+    2.relative
+    3.absolute
+    4.fixed
+    5.sticky
+
+
+1.static:
+    position: static;
+    -default value
+    -top,right,left,bottom are not set
+
+2.relative:
+    position: relative;
+    -relative to its normal positions
+    -top,right,left,bottom are set
+    -other elements are not affected by this element
+    -can be used to move an element from its normal position
+
+z-index:it is used to specify the stacking order of elements
+    when overlapping each other
+    default-0
+    higher value means higher z-index
+    - used for relative, absolute, fixed, sticky
+
+3.fixed
+    position: fixed;
+    -fixed to the browser window
+    -top,right,left,bottom are set
+    -other elements are not affected by this element
+    -can be used to move an element from its normal position
+    -the element remains in the same position even if the page is scrolled
+4.sticky
+    position: sticky;
+    -sticky to the browser window
+    -top,right,left,bottom are set
+    -other elements are not affected by this element
+    -can be used to move an element from its normal position
+    -the element remains in the same position even if the page is scrolled
+    -it is a combination of relative and fixed
+5.absolute
+    position: absolute;
+    -absolute to its normal positions
+    -top,right,left,bottom are set
+    -other elements are not affected by this element
+    -can be used to move an element from its normal position
+    -it depends on inherited element
+    -it need to assign for child elements when the parent is relative, 
+    if parent position is not relative then it set with root element  
+
+
+
+
+
+
+task2 :   https://headless-pizza.netlify.app/
