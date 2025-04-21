@@ -1,0 +1,84 @@
+Array :
+       1.Array is a collection of items
+       2.Array is a list of items/values
+       3.It is used to store multiple values in a single variable
+       4.Array is a mutable(modify after creation) data type
+       5.Array is a dynamic data type
+       6.It can hold values/items like number,string,objects etc...
+       7.Is is denoted by []
+       8.Array is a ordered collection of items
+ex:
+
+              let arr1=[10,20,30,50];
+index positions:        0  1  2  3
+length -4  
+-----------------------------------------------------------------------
+Array Creation:
+    1.Array literal
+    2.Array constructor
+    3.Array.from()
+    4.Array.of()
+1.Array literal:
+        let arr1=[10,20,30,50];
+2.Array constructor:
+        let arr2=new Array(10,20,30,50);
+        let arr3=new Array(5);[_,_,_,_,_]
+3.Array.from():
+        let StringData='hello';
+        let charArr=Array.from(StringData);
+        -it is used to convert string, sets to array
+4.Array.of():
+        let numArr=Array.of(10,20,30,50);
+        -it is used to create new array from a set of values
+
+
+
+
+
+
+
+
+
+ArrayMethods:
+       at()
+       map()
+       filter()
+       reduce()
+       includes()
+       find()
+       every()
+       splice()
+       findIndex()
+       some()
+       reverse()
+       toString()
+       Array.form()
+       join()
+       slice()
+       flat()
+       flatMap()
+       forEach()
+       for of()
+       for in()
+       indexOf()
+       fill()
+       length()
+       delete()
+       push()
+       unShift()
+       pop()
+       shift()
+       padStart()
+       padEnd()
+       trimStart()
+       trimEnd()
+       trim()
+       sort()
+       reduceRight()
+       lastIndexOf()
+       copyWithIn()
+       repeat()
+       split()
+       subString()
+       substr()
+       replace()
