@@ -1,0 +1,108 @@
+BOM:(browser object model)
+----
+    -it is a collection of objects that represent the browser environment
+    -it provides access to the browser window and document 
+    -It access specific features of the browser such as navigation, location, history, and more
+use cases:
+       1.redirect to another page
+       2.open a new window/tab
+       3.browser alerts
+       4.Access browser info
+       5.Access browser history
+       6.Access browser location
+       7.Access browser navigation
+       8.Access browser cookies(session)
+       9.Handling timeouts and intervals
+
+
+DOM:(document object model)
+----
+    -It represents the structure of the HTML document and its content as a tree of objects
+    -it is a collection of objects that represent the HTML document
+    -it provides access to the HTML elements and their properties
+    -It manipulates the HTML document and Css
+
+use cases:
+      1.creating dynamic web pages
+      2.manipulating the HTML document
+      3.creating interactive web pages
+      4.providing Css
+      5.providing Js
+      6.create or removing elements
+      7.Handling events
+
+ 
+                         DOM                                        BOM
+--------------------------------------------------------------------------------
+purpose         interact with the HTML document          interact with the browser
+
+Main Object     document                                 window
+
+---------------------------------------------------------------------------------
+
+DOM Manipulation:
+++++++++++++++++++
+           1.Element accessing
+           2.Element creation
+           3.Element removal
+           4.Element modification/Manipulation
+           5.Attribute Manipulation
+           6.Css Manipulation
+           7.Event Manipulation/Handling
+
+1.Element accessing
+             - accessing element by DOM methods
+      1.getElementById() -- accessing element by id(unique) -->returns single element
+      2.getElementsByClassName() -- accessing element by class name-->returns multiple elements
+      3.getElementsByTagName() -- accessing element by tag name->returns multiple elements
+      4.querySelector()--accessing element by css selector(first match)-->returns single element
+      5.querySelectorAll()-->accessing element by css selector(all matches)-->returns multiple elements
+
+--------------------------------------------------------------------------
+2.Element creation
+             - creating element by DOM methods
+      1.createElement()
+                --> creating element by tag name
+                -->returns single element
+                -->it creates content in memory
+                -->to appear in document we need to use
+                        1.appendChild()
+                        2.insertBefore()
+                        3.replaceChild()
+                        4.prepend()
+------------------------------------------------------------------------------
+3.Element Manipulation
+             - modifying element by DOM methods
+        1.appendChild() -- adding element at the end
+        2.insertBefore() -- adding element at the position(sibling element)
+        3.replaceChild() -- replacing element
+        4.prepend()-- adding element at the beginning
+        5.removeChild() -- removing element
+        6.cloneNode()-- cloning element
+
+
+                     appendChild()          insertBefore()          prepend()
+----------------------------------------------------------------------------------
+parent  tag               yes                         yes                     yes
+
+sibling tag               no                          yes                     no
+
+where it inserts         at the end        at the position          at the beginning
+
+------------------------------------------------------------------------------------
+Attribute Manipulation:
+             - modifying attribute by DOM methods
+        1.setAttribute() -- adding attribute
+        2.removeAttribute() -- removing attribute
+        3.getAttribute() -- accessing attribute
+        4.hasAttribute() -- checking attribute presence
+----------------------------------------------------------------------------------
+Css Manipulation:
+             - modifying Css by DOM methods
+        1.style -- adding Css
+        2.getComputedStyle() -- accessing Css
+        3.classList.add() -- adding class
+        4.classList.remove() -- removing class
+        5.classList.toggle() -- toggling class
+        6.classList.contains() -- checking class presence
+----------------------------------------------------------------------------------

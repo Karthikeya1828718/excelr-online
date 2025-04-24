@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute Manipulation</title>
+</head>
+<body>
+    
+    <p id="my_p" class="my_p_class">this is a paragraph</p>
+    
+    <script>
+
+    let p=document.getElementById('my_p');
+    console.log(p.getAttribute('class'));
+    let img=document.createElement('img');
+    img.setAttribute('src','./dom.png')
+    img.setAttribute('width','200px')
+    img.setAttribute('height','200px')
+    img.setAttribute('alt','dom')
+    img.setAttribute('title','document object model')
+    document.body.appendChild(img);
+
+    console.log(img.getAttribute('src'));
+    img.removeAttribute('width');
+    console.log(img.hasAttribute('width'));
+    
+    
+     
+    </script>
+</body>
+</html>

@@ -31,22 +31,121 @@ Array Creation:
         let numArr=Array.of(10,20,30,50);
         -it is used to create new array from a set of values
 
+-----------------------------------------------------------------
+accessing data from array:
+       1.Array indexing
+       2.Array methods
+------------------------------------------------------------------
+updating/modifying data in array:
+       1.Array indexing
+       2.Array methods
 
-
-
-
-
-
-
-
+------------------------------------------------------------------
+Adding elements to an array:
+       1.Array indexing
+       2.Array methods:
+                     1.push()-add element at the end
+                     2.unshift()-add element at the beginning
+---------------------------------------------------------------
+removing elements from an array:
+       1.Array indexing
+       2.Array methods:
+                     1.pop()-remove element from the end
+                     2.shift()-remove element from the beginning
+---------------------------------------------------------------
 ArrayMethods:
-       at()
-       map()
-       filter()
-       reduce()
-       includes()
-       find()
-       every()
+
+ 1.at():
+ +++++++   
+        -it is used to access an element at a specific index   
+        -it will accept positive index and negative index
+-----------------------------------------------------------------------
+ 2.map()
+ ++++++++
+        -it is used to create a new array by performing a specific
+          operation on each element of an existing array
+       -it returns a new array
+       -it wont change the original array
+       -it takes a function as an argument
+       -it is used to data transferring
+       -it is an example of higher order function and introduced in Es5
+       
+syntax:
+    map(element ,index,array){
+      return element;
+    }
+element: value of an array
+index: index of an array(optional)
+array: original array(optional)
+-------------------------------------------------------------------
+3.filter()
+ ++++++++
+        -it is used to create a new array by keeping the elements
+          of an existing array for which a specific condition is true
+        -it returns a new array
+        -it wont change the original array
+        -it takes a function as an argument
+        -it is an example of higher order function and introduced in Es5
+syntax:
+    filter(element ,index,array){
+      return element;
+}
+index and array is optional
+-------------------------------------------------------------------
+4.reduce()
+++++++++++
+        -it is used to create a new array by performing a specific
+          operation on each element of an existing array
+        -it returns a single value
+        -it wont change the original array
+        -it takes a function as an argument
+        -it is an example of higher order function and introduced in Es9
+syntax:
+
+array.reduce((accumulator, currentValue, index, array) => {
+    return accumulator;
+}, initialValue);
+
+accumulator: it is used to store the result of the previous iteration
+currentValue: it is used to store the current element of the array
+index: index of an array(optional)
+array: original array(optional)
+initialValue: it is used to provide a default value for the accumulator
+             (optional but recommended)
+------------------------------------------------------------------------------------
+5.includes()
+++++++++++
+        -it is used to check if an element is present in an array
+        -it returns a boolean value
+syntax:
+array.includes(element,fromIndex);
+element: value of an array
+fromIndex: index of an array(optional), default value is 0
+---------------------------------------------------------------
+6.find()
++++++++++
+        -it is used to return the first element of an array that
+          satisfies a specific condition
+        -it returns a single value i.e first result 
+        -it introduced in es6
+syntax
+
+array.find((element,index,array)=>{
+       return element;
+})
+index and array are optional
+---------------------------------------------------------------
+7.every()
+++++++++++
+        -it is used to check if all the elements of an array
+          satisfy a specific condition
+        -it returns a boolean value
+        -it introduced in es6
+syntax
+array.every((element,index,array)=>{
+       return element;
+})
+-------------------------------------------------------------------
        splice()
        findIndex()
        some()

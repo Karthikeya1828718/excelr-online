@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="div1">
+        <!-- p tag -->
+         <p id="removedP">this is a removed text</p>
+         <p id="replaceP">this is a replaced text</p>
+
+         <i id="insertedP">this is adjacent text</i>
+
+         <p id="clone">it is cloned text</p>
+    </div>
+
+
+
+    <script>
+       let div= document.getElementById('div1');
+       let p=document.createElement('p');
+       p.innerHTML='this is a paragraph';
+       p.style.color='red';
+       div.appendChild(p);
+       let arr=[10,20,30,41,50];
+       let ul=document.createElement('ul');
+       for(let e of arr){
+           let li=document.createElement('li');
+           li.innerHTML=e;
+           if(e%2==0){
+               li.style.color='green';
+           }
+           else{
+               li.style.color='red';
+           }
+           ul.appendChild(li);
+       }
+       div.appendChild(ul);
+       
+       let removedP=document.getElementById("removedP")
+       div.removeChild(removedP);
+
+       let replacedP=document.getElementById("replaceP");
+       let newP=document.createElement('p');
+       newP.innerHTML='this is a new paragraph';
+       div.replaceChild(newP,replacedP);
+
+        let adjacentP =document.createElement('i');
+        adjacentP.innerHTML='this is an adjacent paragraph  ';
+        div.insertBefore(adjacentP,document.getElementById('insertedP'));
+
+        let cloneP=document.getElementById('clone');
+        let clonedP= cloneP.cloneNode(true);
+        div.insertBefore(clonedP,cloneP);
+
+
+    </script>
+</body>
+</html>

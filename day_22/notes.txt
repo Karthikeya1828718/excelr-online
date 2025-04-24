@@ -1,0 +1,84 @@
+splice():
+++++++++
+      -it is used to add or remove elements from an array
+      -it returns an array
+      -it changes the original array
+
+syntax:
+
+array.splice(start,deleteCount,element1,element2,element3,....elementN);
+start: it is used to specify the starting index
+deleteCount: it is used to specify the number of elements to be removed(optional)
+element1,element2,element3,....elementN: 
+           it is used to specify the elements to be added(optional)
+
+
+some():
+++++++
+       -it is used to check if any of the elements of an array
+         satisfy a specific condition
+       -it returns a boolean value
+       -it introduced in es6
+syntax:
+
+array.some((element,index,array)=>{
+    //condition
+       return element;
+})
+
+-------------------------------------------------------------------
+
+         forEach()             map()                   filter()
+--------------------------------------------------------------------
+use:     loop through      loop through              loop through 
+        the array          the array                  the array 
+
+purpose  iterates          process/transform the data    filter the data
+
+returns    nothing         returns a new array       returns a new array
+
+modify
+original   no                 no                          no
+array
+
+-------------------------------------------------------------------
+ 
+ 
+ 
+               for..of                     for..in
+-------------------------------------------------------------------
+loop            yes                         yes
+
+returns         value of each element       key of each element
+
+modify          no                          no
+
+loop over      element/value                 index/keys
+
+useCase:      array/Strings                  objects
+
+
+---------------------------------------------------------------------
+ 
+ 
+                  indexOf()            findIndex()         includes()
+--------------------------------------------------------------------
+matchType          exactMatch          partialMatch        exactMatch
+
+returns            index or -1         index or -1         boolean
+
+work with objects   yes                 no                  yes
+
+---------------------------------------------------------------------
+
+
+   length()   -- it returns size of an array
+   push()     -- it is used to add element at the end
+   unShift()  -- it is used to add element at the beginning
+   pop()      -- it is used to remove element from the end
+   shift()    -- it is used to remove element from the beginning
+      
+       
+
+     
+       

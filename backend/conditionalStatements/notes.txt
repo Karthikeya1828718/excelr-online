@@ -1,0 +1,67 @@
+Conditional Statements :
+it is used to execute the block of code based on condition
+
+
+if condition:
+-----------------------
+syntax :
+
+if(condition){
+    // if condition satisfy block of code will execute
+}
+
+
+=========================================
+else if condition:
+-----------------------
+syntax :
+
+if(condition){
+// if condition satisfy , if block  will execute
+
+}
+else{
+// if condition not satisfy , else block will execute
+}
+
+
+=========================================
+else if ladder :
+-----------------------
+syntax :
+
+if(condition1){
+
+}
+else if(condition2){
+
+}
+else if(condition3){
+
+}
+.
+.
+.
+.
+else{
+    --it is not mandatory to write
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+note :
+  in a block if we are having only  one statement ,then flower braces are not required
+  in a block if we are having more than one statement ,then flower braces are required
