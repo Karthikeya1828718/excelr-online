@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login With EventHandling</title>
+    <style>
+        form{
+            border: 2px solid black;
+            width: 400px;
+            margin: 100px auto;
+            text-align: center; 
+            padding: 40px;
+        }
+    </style>
+</head>
+<body>
+    
+    <form action="" >
+        <label for="username">Username</label>
+        <input type="text" name="username" id="username">
+        <br><br>
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password">
+        <br><br>
+        <p id="error"></p>
+        <input type="submit" value="Login">
+    </form>
+
+    <script>
+        let obj={
+            username:"admin",
+            password:"1234"
+        }
+
+        document.addEventListener('submit',(event)=>{
+            event.preventDefault();
+            let username=document.getElementById('username').value;
+            let password=document.getElementById('password').value;
+            console.log(username,password);
+            if(username==obj.username && password==obj.password){
+                console.log('login success');
+                window.location.href="home.html";
+            }else{
+                console.log('login failed');
+                let error=document.getElementById('error');
+                error.innerHTML="Login failed! Please try again.";
+                error.style.color="red";
+
+            }
+        })
+        
+
+    </script>
+</body>
+</html>

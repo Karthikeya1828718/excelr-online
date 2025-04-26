@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Handling</title>
+    <style>
+      #box {
+        width: 200px;
+        height: 200px;
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- inline event handling -->
+    <button onclick="wish()">Click</button>
+    <button id="btn">Click 2</button>
+    <button id="btn3">Click 3</button>
+
+    <div id="box"></div>
+    <script>
+      let box = document.getElementById("box");
+      box.addEventListener("mouseover", function () {
+        box.style.backgroundColor = "red";
+        box.innerHTML='this is a mouseover event';
+      });
+      box.addEventListener("mouseout", function () {
+        box.style.backgroundColor = "green";
+        box.innerHTML='this is a mouseout event';
+      });
+
+
+
+
+
+
+      let button3 = document.getElementById("btn3");
+      button3.addEventListener("click", function () {
+        alert("wish from click3");
+      });
+
+      let button = document.getElementById("btn");
+      button.onclick = function () {
+        alert("wish from click2");
+      };
+
+      function wish() {
+        window.alert("Hello World");
+      }
+    </script>
+  </body>
+</html>

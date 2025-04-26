@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove EventHandler</title>
+</head>
+<body>
+    
+    <button id="btn">click</button>
+    <script>
+        function buttonClick(){
+            alert('button is clicked');
+            button.removeEventListener('click',buttonClick);
+        }
+        let button=document.getElementById('btn');
+        button.addEventListener('click',buttonClick());
+    </script>
+</body>
+</html>

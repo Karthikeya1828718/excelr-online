@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function Example</title>
+  </head>
+  <body>
+    <script>
+      let person1 = {
+        name: "kumar",
+      };
+      let person2 = {
+        name: "suresh",
+      };
+      function greet() {
+        console.log("hello ", this.name);
+      }
+      greet.call(person1);
+      // ----------------------------------------------------
+
+      function greet2(greet) {
+        console.log(greet, this.name);
+      }
+      greet2.call(person2, "hi");
+
+      // --------------------------------------------
+      function greet3(greet, punctuation) {
+        console.log(greet, punctuation, this.name);
+      }
+      greet3.apply(person1, ["hello", "!"]);
+      let arr4 = [1, 20, 40, 50, 100];
+      let max = Math.max.apply(null, arr4);
+      console.log(max);
+
+      // bind() example
+      let person3 = {
+        name: "kumar",
+        greet: function () {
+          console.log('hi ', this.name);
+        },
+      };
+      let greetFunc=person3.greet;
+      greetFunc();//hi undefined
+      let greetFunc2=person3.greet.bind(person3);
+    //   greetFunc2();//hi kumar
+      setTimeout(greetFunc2,2000);
+    </script>
+  </body>
+</html>

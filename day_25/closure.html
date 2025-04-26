@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure</title>
+</head>
+<body>
+
+    <button id="btn">Click</button>
+    <script>
+
+        function outer(){
+            let count=0;
+            return function inner(){
+                count++;
+                console.log(count,'in inner function');
+            }
+        }
+        let a=outer();
+        a();
+        a();
+        a();
+
+
+
+
+        function parent(){
+            let home='Hyderabad🏠';
+            return function child(){
+                console.log(home);
+            }
+        } 
+       let ClosureChild= parent();
+       ClosureChild();
+
+
+    //    --------------------------------------------------------------
+    function createClickHandler(msg){
+       return function(){
+           console.log(msg, 'clicked from Closure');
+       }    
+    }
+    let btn=document.getElementById('btn');
+    btn.addEventListener('click',createClickHandler('Hello buddy...!!!'));
+    //------------------factory function-------------------------
+
+    function multiply(multiplier){
+         return function(n){
+             return multiplier*n;
+         }
+    }
+    let double=multiply(2);
+    console.log(double(10));
+    console.log(double(14));
+    // --------------------------------------------------------------
+    
+    
+    </script>
+</body>
+</html>

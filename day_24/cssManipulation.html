@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Css Manipulation</title>
+    <style>
+      .highlight {
+        background-color: yellow;
+        font-weight: bold;
+        width: 400px;
+        height: 50px;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="div1">this is a div</div>
+    <div id="container">this is another container</div>
+    <button onclick="addHighlight()">click to ad    d highlight</button>
+
+    <div id="container2" class="highlight">this is css removed container</div>
+    <button onclick="removeHighlight()">click to remove highlight</button>
+
+    <div id="container3">this is for toggle</div>
+    <button onclick="toggleHighlight()">click to toggle</button>
+
+    <div id="container4" class="highlight">checking the highlight</div>
+    <button onclick="check()">check highlight</button>
+   
+   
+   <div id="box" class="highlight">this is a div box</div>
+   <script>
+     let box=document.getElementById("box");
+     let style=getComputedStyle(box);
+     console.log(style.backgroundColor);
+     console.log(style.padding);
+     
+
+
+
+
+
+
+
+      let container4 = document.getElementById("container4");
+      function check() {
+        if (container4.classList.contains("highlight")) {
+          alert("highlight present");
+        } else {
+          alert("highlight not present");
+        }
+      }
+
+      let container3 = document.getElementById("container3");
+      function toggleHighlight() {
+        container3.classList.toggle("highlight");
+      }
+
+      //inline css
+      let div1 = document.getElementById("div1");
+      div1.style.color = "red"; //adding
+      div1.style.fontSize = "30px";
+      console.log(div1.style.color); //accessing
+
+      //accessing container
+
+      let container = document.getElementById("container");
+      //adding class to container
+      function addHighlight() {
+        container.classList.add("highlight");
+      }
+
+      let container2 = document.getElementById("container2");
+      function removeHighlight() {
+        container2.classList.remove("highlight");
+      }
+    </script>
+  </body>
+</html>

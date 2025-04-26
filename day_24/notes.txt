@@ -1,0 +1,62 @@
+
+Css Manipulation:
+             - modifying Css by DOM methods
+        1.style -- adding Css(inline css)
+        2.getComputedStyle() -- accessing Css
+        3.classList.add() -- adding class
+        4.classList.remove() -- removing class
+        5.classList.toggle() -- toggling class(add or remove/on or off)
+        6.classList.contains() -- checking class presence
+-----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+function:
+   -block of code that performs a specific task
+   -it is a re-usable block of code
+   -it is a collection of statements that performs a task
+   -we can call function multiple times for executing the same task
+event:
+   -event is an action that occurs in the browser
+   -event is a signal/notification that something has happened
+   -used to handle user interactions
+useCases: 
+    1.click events
+    2.mouse events
+    3.key events
+    4.scroll events
+    5.form events etc 
+----------------------------------------------------------------
+Event Handling:
+             - handling events by DOM methods
+             - used to handle user interactions 
+             - it is a code(function) that is executed when an event occurs
+        
+        1.addEventListener() -- adding event listener
+        2.removeEventListener() -- removing event listener
+        3.dispatchEvent() -- dispatching event
+-----------------------------------------------------------------------
+Event bubbling:
+             - event propagation in the DOM
+             - event is propagated from child to parent
+             DOM
+             |
+             Root Element
+             |
+             head body
+                  |
+                  div outside
+                  |
+                  div inside
+                  |
+                  button
+ex: button--->div(inside)--->div(outside)--->body--->html--->document
+-----------------------------------------------------------------------
+
+Event bubbling:
+       button-->div(inside)-->div(outside)
+Event capturing/trickling:
+       div(outside)-->div(inside)-->button
+       - event is propagated from parent to child
+       -default propagation is from child to parent
+       -to achieve event capturing, we can use addEventListener() 
+       method with third argument as true
+-------------------------------------------------------------------
