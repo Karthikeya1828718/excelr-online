@@ -1,0 +1,170 @@
+Day 27:
+-----------------------------------------
+React:
+     - React is a JavaScript library for building user interfaces.
+     - it is released by Facebook in 2013.(Jordan Walke)
+     - React is a declarative, efficient, and flexible JavaScript 
+       library for building user interfaces.
+     - it is used to develop single-page applications.
+     - React is a component-based front-end library.
+     - React makes it painless to create interactive UIs.
+     - React is used to develop web applications/mobile.
+       applications/desktop applications.
+
+---------------------------------------------------------------------------
+Who uses react:
+    -Facebook
+    -Netflix
+    -Airbnb
+    -Instagram
+    -Snapchat
+    -Youtube
+    -Spotify
+    -Tinder
+----------------------------------------------------------------
+Why use react:
+    -High performance with virtual DOM(document object model)
+    -Single page applications
+    -Easy to learn and implement
+    -It is free and open source
+    -Huge ecosystem of libraries(React Router, Redux, etc.)
+    -Easy to integrate with other existing projects
+    -It is fast and efficient
+------------------------------------------------------------------------
+how to create react project:
+
+steps:
+   1. create a folder
+   2. open terminal for the folder(cmd)
+   3. npx create-react-app project_name
+npx: node package execution ,  it is a command line tool that
+  allows you to execute npm packages directly from the command line.
+   4.cd project_name
+   5.npm start
+
+----------------------or-------------------------------
+steps:
+   1. create a folder
+   2. open terminal for the folder(cmd)
+   3. npm create vite@latest
+                   project_name: name of the project
+                   framework :  react
+                   variant : JavaScript
+   4.cd project_name
+   5.npm install (installing dependencies /node packages) 
+     (npm- node package manager)
+   6.npm run dev
+
+--------------------------------------------------------------------------
+JSX - JavaScript XML(extension of js) 
+       (xml- eXtensible Markup Language)
+    -we can write html in js
+--------------------------------------------------------------------------                   
+
+components:
+   ex: header component , footer component , sidebar component etc ..
+
+1.create jsx file
+2.declare the component( function)
+3.return the jsx code(encapsulate/wrap the jsx code)
+  -wrapping can be done 
+                 1. using div tag
+                 2. using fragment tag <></>
+                 3. using template string ``
+                 4. using react.fragment <React.Fragment></React.Fragment>
+4.export the component 
+5.use the component in remaining jsx file 
+          (import in main.jsx file)
+
+------------------------------------------------------------------------
+component : (ui component)
+   ex: header component , footer component , sidebar component etc ..
+   - it is a function/class that returns jsx code
+   - it is a reusable component
+   - it is a file that contains jsx code(html in js file)
+   - we can create a component in two ways 
+             1. function component
+             2. class component
+
+1.function component:
+
+syntax : 
+
+function component_name(){
+    return(
+        <>
+        //jsx code
+        </>
+    )
+}
+
+2.class component:
+
+syntax :
+
+class component_name extends React.Component{
+    render(){
+        return(
+            <>
+            //jsx code
+            </>
+        )
+    }
+}
+---------------------------------------------------------------------
+                         function                        class
+            ------------------------------------------------------
+syntax:                 js function                 Es6 class syntax
+render()                not required                required
+state                   useState  hook              this.state
+props                   props                       this.props
+this key                not required                required
+readability             clean                       more boilerplate
+preferred               modern standard             older standard(deprecated)
+------------------------------------------------------------------
+State :
+    -state is an object that contains data that the component needs.
+    -it is used to store/update/manage data that the component needs 
+      to render.
+    -we can  modify the state in the component with the help of
+      setState() method. or this.setState() method.
+
+syntax: let [state /data, setState]=useState(initialState)
+ex: 
+   1.let [count, setCount] = useState(0)
+   2.let [name , setName] = useState('')
+   3.let [user , setUser] = useState({})
+   4.let[fruits, setFruits] = useState([])
+   5.let[isTrue, setIsTrue] = useState(true)
+
+setState() method:
+    -it is used to update the state of the component.
+    -it is a function used to update
+
+useState() hook:
+      -it is a hook that returns an array of two elements.
+      -the first element is the state variable.
+      -the second element is the function that updates the state variable.
+      -it is used to manage the state of the component.
+
+hooks:
+   -it is a function(special) that returns jsx code.
+   ex: useState(), useEffect(), useRef(), useContext()
+---------------------------------------------------------------------
+props:(properties)
+   -props is an object that contains data that the component needs.
+   -it is used to pass data from parent component to child component.
+   -we can access the props data in the component with the help of props.
+   -props are read-only.
+   -we can't modify the props data in the component.
+   -props are immutable.
+--------------------------------------------------------------------------------
+                           state                          props
+            ----------------------------------------------------------------------
+definition             used to update             used to pass/transfer(parent->child)
+mutability             mutable(can be modified)   immutable (can't be modified)
+managed                by itself                   by parent component
+access                 by itself                   by child component
+                       this.state/useState()       props/{name,age}
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
