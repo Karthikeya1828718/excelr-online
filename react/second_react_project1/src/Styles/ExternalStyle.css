@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#external{
+    background-color: red;
+    padding: 10px;
+    color: white;
+}
+
+#navbar{
+    background-color: red;
+}
+#menuList{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    height: 40px;
+    
+
+}
+.menuItems{
+    color: blue;
+    font-size: 30px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+}
+
+   

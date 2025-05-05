@@ -85,6 +85,13 @@ component : (ui component)
    - we can create a component in two ways 
              1. function component
              2. class component
+             3. Pure component
+             4. Higher order component
+             5. Function Component with hooks 
+             6. Presentational Component
+             7. Container Component
+             8. Controlled Component
+             9. Uncontrolled Component
 
 1.function component:
 
@@ -158,6 +165,7 @@ props:(properties)
    -props are read-only.
    -we can't modify the props data in the component.
    -props are immutable.
+   -passing data: number, String , Object , Array, Function etc ..
 --------------------------------------------------------------------------------
                            state                          props
             ----------------------------------------------------------------------
@@ -168,3 +176,102 @@ access                 by itself                   by child component
                        this.state/useState()       props/{name,age}
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
+Day 29:
+-------
+
+props drilling :
+    -it is a technique that is used to pass data from parent component
+     to child component.
+ex:  Grand Parent--->Parent--->Child---->Grand Child
+    -it makes difficult to code
+    -it causes deep component hierarchy
+    -it causes code maintainability
+    -to avoid props drilling we can use context api or redux
+--------------------------------------------------------------------
+context api
+       -it is a technique that is used to pass data 
+        from parent component to child component.
+       -it makes easy to code
+       -it causes shallow component hierarchy
+       -we are creating a context object(global object) with the help
+       of createContext() method
+       -Provider-used to provide/pass/send the data
+       -Consumer-used to consume/receive the data
+       -with the help of useContext() hook we can consume the data
+
+createContext():
+         - will accept one argument(initialValue/defaultValue)
+         - will return a context object
+
+Provider:
+         -will accept two arguments(value,children)
+         -will return a jsx code
+
+useContext():
+         -will accept one argument(context)
+         -will return a value/data
+-----------------------------------------------------------------------
+Container Component:
+      -it is a component that contains other components.
+      -it holds the state and props of its child components.
+      -it is used to manage the state and props of its child components.
+
+Presentational Component:
+      -it is a component that contains only UI.
+      -it holds the UI of its child components.
+      -it is used to manage the UI of its child components.
+---------------------------------------------------------------------
+Day 30:
+-------
+
+Events :
+    -events are used to handle user interactions/actions by calling functions.
+
+click events:
+        1. onClick
+        2. onDoubleClick
+Mouse events:
+        3. onMouseEnter
+        4. onMouseLeave
+        5. onMouseMove
+        6. onMouseOver
+        7. onMouseOut
+        8. onMouseUp
+        9. onMouseDown
+        10.onMouseWheel
+        11.onScroll
+
+
+---------------------------------------------------------------------
+style in react:
+         1. inline style
+         2. External Style
+         3. external framework/library(bootstrap)
+
+1.inline style:
+  -it is used to provide style with the help of
+   style attribute and object
+ex:
+<button style ={ { key: value} }>click</button>
+2.external style:
+   -it is used to provide style with the help of
+    external css file 
+   -then impost css file in respective jsx file
+
+ex: 
+import './style.css'
+<button>click</button>
+
+3.external framework/library(bootstrap):
+   -it is used to provide style with the help of
+    cdn or node packages
+   -then import bootstrap css file in respective jsx file - for css
+   -then import bootstrap js file in respective jsx file - for js
+
+ex:
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/js/bootstrap.min.js'
+
+node packages:
+cmd: npm install bootstrap@5.3.5
+
