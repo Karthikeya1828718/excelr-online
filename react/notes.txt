@@ -52,6 +52,8 @@ steps:
                    variant : JavaScript
    4.cd project_name
    5.npm install (installing dependencies /node packages) 
+    npm install bootstrap (installing bootstrap)
+    npm install react-router-dom (installing react router dom)
      (npm- node package manager)
    6.npm run dev
 
@@ -241,6 +243,8 @@ Mouse events:
         10.onMouseWheel
         11.onScroll
 
+html:  <button onClick={function_name()}>click</button>
+react: <button onClick={function_name}>click</button>
 
 ---------------------------------------------------------------------
 style in react:
@@ -274,4 +278,87 @@ import 'bootstrap/dist/js/bootstrap.min.js'
 
 node packages:
 cmd: npm install bootstrap@5.3.5
+----------------------------------------------------------------------------------------------
+day 31:
+-------
+ controlled component: 
+         - it is a component controlled by the react state(useState hook)
+         - it is used to manage the state/props of the component
+         - mainly used for form validations , tracking form data
+         - accessing the data with the help of value(target) and onChange event
+
+ Uncontrolled component:
+        - it is a component controlled by the DOM (useRef hook)
+        - it is used to manage the DOM elements of the component
+        - mainly used for quick forms, simple forms
+        - accessing the data with the help of value(current) and onSubmit / onClick event
+      
+---------------------------------------------------------------------------------
+useRef hook:
+        -it is a hook that returns an object.
+        -the object contains a current property.
+        -the current property contains the DOM element.
+        -it is used to manage the DOM elements of the component.
+        -it is used to access the DOM elements of the component.
+
+---------------------------------------------------------------------------------
+useNavigate hook:
+     -hook based navigation
+     -it is used inside a jsx (JavaScript logic like functions etc)
+     -it gives programmatic control over navigation
+     -it is a hook that returns a function.
+     -it is used to navigate to another page.
+     -it is used to redirect to another page.
+     -it must be enclosed in <Route> tag.
+     -<Route> tag must be enclosed in <Routes> tag.
+     -<Routes> tag must be enclosed in <BrowserRouter> tag.
+ex: 
+ form submission, condition rendering
+----------------------------------------------------------------------------------
+Day 32:
+-------
+Link:
+     -component based navigation
+     -it is used inside a jsx  like anchor tag(clickable links )
+     -it is a component that is used to navigate to another page.
+     -it must be enclosed in <Route> tag.
+     -<Route> tag must be enclosed in <Routes> tag.
+     -<Routes> tag must be enclosed in <BrowserRouter> tag.
+ex:
+   navbar links , footer links , sidebar links etc ..
+------------------------------------------------------------------------
+
+Single page application:(spa)
+     -it is a web application that has only one page.
+     -SPA is developed by using React,Angular and Vue.
+     -this approach allows us for more fluid and responsive 
+     user experience.
+     -it wont reload/refresh the entire page.
+
+key -characteristics:
+      1.dynamic content/ui
+      2.client side rendering
+      3.DOM manipulation    
+      4.State manipulation
+      5.API-calls
+      6.Server communication
+      7.Fast loading time
+----------------------------------------------------------------
+Dealing with global data (context in react):
+-----------------------
+  1.creation of context object
+      - we are creating a jsx file with the help of createContext() method
+      ex : export const GlobalAuthContext = createContext(null);
+  2.provider component
+      - with the help of provider we are modifying the context object
+      ex : <GlobalAuthContext.Provider value={value}>
+           </GlobalAuthContext.Provider>
+               or
+            <GlobalAuthContext.Provider value={{value ,setValue}}>
+               {children}
+            </GlobalAuthContext.Provider>
+
+  3.Consumer Component
+      -with the help os useContext() hook we are consuming the data
+      ex : const data = useContext(GlobalAuthContext);
 
