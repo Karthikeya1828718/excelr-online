@@ -1,0 +1,17 @@
+Prime number  
+    1.factor 
+    2.prime number
+    3.prime number in a range
+Number - 143
+    1.sum of number -> 1+4+3 ->8
+    2.product of number -> 1*4*3 ->12
+    3.reverse of number -> 341
+    4.palindrome number -> n->12321 reverse->12321
+    5.count of digits ->3
+    6.Armstrong number: the sum of count(power) of digits is equal to
+                        the original number
+                     143->1*1*1 + 4*4*4 + 3*3*3  
+                         1   +   64    +   27==92
+                      153->1*1*1 + 5*5*5 + 3*3*3
+                         1   +   125   +   27==153
+    7.Armstrong number in a range (100-200)
