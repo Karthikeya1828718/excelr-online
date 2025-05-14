@@ -482,3 +482,12 @@ custom hook:
       return ;
   }
   export default customHookName;
+
+ ----------------------------------------------------------------------------------------
+
+ Redux:
+ ----------
+    - it is a state management library.
+    - it is a productable state container for Js(mainly used in react).
+    - it is used to manage the state of the application.
+    
