@@ -54,6 +54,7 @@ steps:
    5.npm install (installing dependencies /node packages) 
     npm install bootstrap (installing bootstrap)
     npm install react-router-dom (installing react router dom)
+    npm install axios (installing axios library)
      (npm- node package manager)
    6.npm run dev
 
@@ -362,3 +363,122 @@ Dealing with global data (context in react):
       -with the help os useContext() hook we are consuming the data
       ex : const data = useContext(GlobalAuthContext);
 
+----------------------------------------------------------------
+day 33:
+
+Axios:
+-----
+   - it is a JavaScript library for making HTTP requests.
+   - it is a promise based library.
+   - it is used to deal with http/https requests.
+   - it is used to deal with APIs(rest/soap)
+     rest-representational state transfer
+     soap-simple object access protocol
+   -it consists of two parts:
+       1. axios instance
+       2. axios methods
+   - axios instance:
+       -it is used to create an axios object.
+       -it is used to configure the axios object.
+       -it is used to make http/https requests.
+   - axios methods:
+       -it is used to make http/https requests.
+       -it is used to make get/post/put/patch/delete requests.
+                fetch-get method
+                save/login-post method
+                update-put method
+                delete-delete method
+                patch-patch method
+
+----------------------------------------------------------------------------------
+                     axios                  fetch
+          ----------------------------------------------- -------------------------------       
+ syntax             simple syntax         complex syntax   
+ json response      auto parse            .json() method      
+ ----------------------------------------------------------------------------------
+
+ ex:
+ post - https://fakestoreapi.com/products -save operation
+ get -  https://fakestoreapi.com/products -fetch operation
+ get -  https://fakestoreapi.com/products/{id} -fetch operation
+ get -  https://fakestoreapi.com/products/{name} -fetch operation
+    (in browser default method is get)
+ put -  https://fakestoreapi.com/products -update operation
+ patch - https://fakestoreapi.com/products -update operation
+ delete - https://fakestoreapi.com/products -delete operation
+
+----------------------------------------------------------------------------------
+hooks:
+      - hooks are predefined functions in react.
+      - hooks have a prefix use. 
+
+useState hook:it is used to manage the state of the component.
+
+    ex:  number
+    let[number,setNumber]=useState(0);
+    let[var_Name, func_to_Manage_value]=useState(initialValue);
+
+useParam hook:it is used to access the params/values from url
+    
+    ex: https://localhost:3000/products/1
+     let {id}=useParams();
+
+useRef hook:it is used to manage the DOM elements of the component.
+
+    ex: let userName_reference=useRef();
+    <input type="text" ref={userName_reference} />
+
+useEffect hook:it is used to perform side effects in the component.
+               and to add elements to the DOM implicitly.
+
+    ex: useEffect(//code,[])
+
+useContext hook:it is used to access the data from the 
+                 context object.(global object)
+        ex: const data = useContext(GlobalAuthContext);
+
+useReducer hook:it is used to manage the state of the component.
+               :it is just like useState hook.
+               :it is used when the state is complex/nested/large
+    when:
+       the state have more than one value.
+       the state have more than one function.
+
+    syntax:
+
+    let[state,dispatch]=useReducer(reducerFunction,initialState)
+
+    initialState:it is used to set the initial value of the state.
+    reducerFunction:it is used to update/manage the state of the component.
+                   :it is a function which accepts two arguments.
+                   :the first argument is the state.
+                   :the second argument is the action.
+              syntax: reduce(state,action){
+                         //set of sentences that performs a task
+                         return newState
+                    }
+    dispatch: it is a function which triggers the reducer function to
+              change the state
+
+
+-------------------------------------------------------------------
+       useState hook                        useReducer hook
+    ---------------------------------------------------------------
+simple state management                  complex state management
+primitive data type                      complex data type
+single value                             multiple values
+less code /boilerplate                   more code/boilerplate
+
+-------------------------------------------------------------------
+custom hook:
+           -the hook created by the developer/programmer
+           -prefix must be use
+           -by using inbuilt hooks we can create custom hooks
+
+  syntax :
+
+  function customHookName(){
+      //set of sentences that performs a task
+      return ;
+  }
+  export default customHookName;

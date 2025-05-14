@@ -1,17 +1,10 @@
 import React, { useEffect } from "react";
 import axios from 'axios';
 import '../styles/FetchProducts.css';
-import { Link } from "react-router-dom";
-const FetchProducts = () => {
-  let [products, setProducts] = React.useState([]);
-  //fetching backend data with the help of fetch api
-//   let fetchData = () => {
-//     fetch("https://fakestoreapi.com/products")
-//       .then((res) => res.json())
-//       .then((json) => setProducts(json)) //adding products to state
-//       .catch((err) => console.log(err));
-//   };
-// fetching  data with the help of axios
+import { useNavigate } from "react-router-dom";
+const UpdateProduct = () => {
+ let [products, setProducts] = React.useState([]);
+ let navigate =useNavigate();
 
 let fetchData=()=>{
       axios.get('https://fakestoreapi.com/products')
@@ -22,6 +15,9 @@ let fetchData=()=>{
     fetchData();
   }, []);
 
+
+
+
   return (
     <>
       <div className="container">
@@ -29,15 +25,11 @@ let fetchData=()=>{
           products.map(
             (product)=>{
               return(
-                <div className="card" key={product.id}>
+                <div className="card" key={product.id} onDoubleClick={()=>navigate(`/editProduct/${product.id}`)}>
                   <img src={product.image}  alt={product.title} />
                   <h3>{product.title.slice(0,15)}</h3>
                   <p className="price">${product.price}</p>
                   <p className="category">{product.category}</p>
-
-
-                 <Link to={`/updateProduct/${product.id} `} className="btn btn-outline-primary">Update</Link>
-                 <Link to={`/deleteProduct/${product.id}`} className="btn btn-outline-danger">delete</Link>
                 </div>
               )
             }
@@ -45,7 +37,7 @@ let fetchData=()=>{
         }
       </div>
     </>
-  );
-};
+  )
+}
 
-export default FetchProducts;
+export default UpdateProduct;
