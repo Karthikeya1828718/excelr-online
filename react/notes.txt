@@ -482,12 +482,294 @@ custom hook:
       return ;
   }
   export default customHookName;
+  -------------------------------------------------------------------
 
- ----------------------------------------------------------------------------------------
-
- Redux:
- ----------
+  Redux:
+  ------
     - it is a state management library.
-    - it is a productable state container for Js(mainly used in react).
+    - it is a predictable state container for js(mainly used in react).
     - it is used to manage the state of the application.
+
+redux architecture: 
+    -it follows uni directional data flow.
+
+        flow:
+        ui-->action-->dispatch--->reducer-->store
+
+Components:
+-----------
+1.view(UI)
+2.state-it is a data
+3.action- it is an event(trigger)
+        -it is an object it consist type and payload(describes the data of the event)
+4.reducer-it is used to update/manage the state of the application.
+5.store - it is used to store the state of the application.
+6.dispatch- it is dispatch the action to the reducer.
+7.Middleware - it is used to modify the action before it is dispatched to the reducer.
+             - it intercepts the action before it is dispatched to the reducer.
+             - it is used to add extra logic,functionality, validations,
+              logging,security etc to the action.
+              -it provides a third party extension point to 
+              modify the action before it is dispatched to the reducer.
+              -mainly used for logging,security, api calls etc
+             
+  1.thunk- middleware function which handles async logic
+  2.saga- middleware function(generator) which handles async logic
+  -----------------------------------------------------------------------------
+   commands:       
+            npm install redux
+            npm install react-redux
+            npm install redux-thunk
+            npm install redux-saga
     
+    npm create vite@latest
+    provide project_name
+    framework: react
+    variant: JavaScript
+    cd project_name
+    npm install bootstrap redux react-redux
+    npm run dev
+
+
+    project structure
+    ----------------
+    src
+    |__App.jsx
+    |__main.css
+    |__main.jsx
+    |__App.css
+    |__store -CounterStore.jsx
+    |__actions -CounterActions.jsx
+    |__reducers -CounterReducers.jsx
+
+flow:
+      view(UI) - creating a jsx file to display the UI
+        |
+calling functions when event triggers- creating a action.jsx file 
+        |                           to create a function to handle event
+        |
+        |dispatch()--created by using useDispatch hook
+        |
+dispatching action to the reducer- creating a reducer.jsx file 
+        |                           to update the state of the application
+        |
+        |
+updating the state of the application- 
+        |                           creating a store.jsx file 
+        |                           to store the state of the application
+        |
+        |  the redux context need to be enclosed in <Provider> tag
+        |
+ view (UI) displaying the output  -by accessing data from store using
+                                   useSelector hook
+  
+---------------------------------------------------------------
+                    context-api                  redux
+    -------------------------------------------------------
+complexity            low                        high 
+performance           high                       low
+boilerplate           minimal                    large
+best for              small apps                 large apps
+async logic           manually                   middleware(thunk,saga)
+---------------------------------------------------------------
+
+redux toolkit:
+    -modern redux library
+    -it is used to manage the state of the application.
+    -it is used to create a store/reducer.
+    -eliminates most of redux boilerplate code.
+    -it consist build in createStore function, createSlice , createAsyncThunk.
+    -suitable for large apps.
+
+cmd:
+npm install @reduxjs/toolkit
+npm install redux react-redux redux-thunk @reduxjs/toolkit bootstrap axios
+
+------------------------------------------------------------------------
+@reduxjs/toolkit: state management
+createAsyncThunk: async logic
+createSlice: reducer
+
+project structure:
+src
+|__App.jsx
+|__main.css
+|__main.jsx
+|__App.css
+|__store -UsersStore.jsx/UserStore.js
+|__Users-UserSlice.jsx/UserSlice.js
+|__components - UsersList.jsx
+
+-------------------------------------------------------------------------------------------
+
+flow of redux toolkit:
+
+            ui
+            |
+          main.jsx --wrapped component with provider tag and store
+            |
+          App.jsx
+            |
+        ProductList.jsx--displaying fetch data from store
+            |          -- fetched data from store using useSelector hook
+            |          -- {products, state, error}
+            |          -- printing data based on status
+            |
+            |
+        dispatching action to the middleware   -fetchProducts() - created by using createAsyncThunk
+                                               -which returns a function (state, action)  
+            |
+            |
+        ProductSlice.jsx  --reducer - created by using createSlice
+            |
+            |
+        UsersStore.jsx  --store - created by using configureStore
+            |
+            |
+        UI  --displaying data from store using useSelector hook based on status
+---------------------------------------------------------------------------
+
+MERN (mongodb,express,react,nodejs):
+    -it is a full stack web development framework.
+    -mongodb-database(no sql)
+    -express-server(backend web framework)
+    -react-client(UI)
+    -nodejs-server(JavaScript server -backend)
+
+database: db(container) is used to store the data. 
+        : it use a language(sql and nosql)
+        -sql: structured query language
+            : which stores the data in tables.
+        -Nosql: non-structured query language
+            : which stores the data in documents/objects.
+-------------------------------------------------------------------
+                   sql(relational)               nosql(non-relational)
+    --------------------------------------------------------------- 
+model             table                         document/collection
+              (rows and columns)                (json/ key-value/graphs)
+
+schema         fixed                             flexible
+ex             mysql , oracle                     mongodb, Cassandra
+-------------------------------------------------------------------
+
+Steps for mongodb:
+ 
+
+ 1.sign in
+ 2.create a project
+          : click on new project button
+          : provide project name-->next-->add members(optional)---> create
+ 3.create a cluster for project
+          :let side -->clusters-->create cluster
+          :deploy -- choose free --->provide cluster name --->create
+ 4.create a database user for project
+        -it is important to create a database and connect to backend
+        -database access(left side)-->  add new db user
+            : Password :
+                  userName:bookUser
+                  Password:Book123
+                  Database User Privileges: Atlas Admin
+            :click on create user
+ 5.Access IP Address:
+         :Network access(left side)-->Access IP Address
+         - add new ip address
+         -click on add ip address
+         -allow access from anywhere (0.0.0.0/0)
+         -click on confirm
+ 6.create db and collections
+       : clusters-->
+       browse collections--->
+       create database(inside collections)--->
+       provide : database name
+       provide : collection name
+       click on create
+ 7.create a connection links
+     -->clusters-->connect--->choose driver--->
+        copy the connection string-->click on done
+
+
+mongodb+srv://bookUser:Book123@bookcluster.wve30ts.mongodb.net/?retryWrites=true&w=majority&appName=bookCluster
+    
+
+
+
+
+atlas  --> project -->cluster-->database--->collection
+                                        --->collection
+                                        --->collection
+                            --->database--->collection
+                                        --->collection
+                                        --->collection
+--------------------------------------------------------------------------
+create a project to perform crud operations:
+    1.saveBook-post method---   /saveBook
+    2.getBooks-get method---    /getBooks
+    3.updateBook-put method---  /updateBook
+    4.deleteBook-delete method--/deleteBook
+
+1.create a project
+    cmd :
+        mkdir bookCrud
+        cd bookCrud
+        npm init -y
+        npm install express mongoose cors nodemon dotenv
+2.Project structure:
+   
+   
+    bookCrud
+        |
+        |__server.js
+        |__.env
+        |
+        |__routes
+        |    |
+        |    |__bookRoutes.js
+        |
+        |__models
+        |    |
+        |    |__bookSchema.js
+     
+    
+------------------------------------------------------------------------------------------
+
+express crud methods :
+
+1. setup the server.js---connect your database(mongodb/mongoose) and frontend(cors)
+2. created a schema/model --- bookSchema.js
+3. created a routes --- bookRoutes.js-- used to create endpoints/apis
+
+creating api/endpoints :
+
+Router methods: it is used to create endpoints/apis
+              : obtained from express router object
+    router.post() -save
+    router.get()  -fetch
+    router.put()  -update
+    router.delete() -delete
+
+
+these are methods from model providing by mongoose.schema:
+    save():it is used to save the data to the database.
+    find():it is used to fetch(fetchAll) the data from the database.
+    findByIdAndUpdate():it is used to update the data in the database.
+    findByIdAndDelete():it is used to delete the data from the database.
+            
+      
+cors : it is used to enable cross origin resource sharing between 
+       different domains.(frontend and backend)
+cors error: cors policy not allow origin 
+
+we are avoiding cors error by using 
+     1. adding cors middleware in server.js
+
+            app.use(cors({
+                origin :'http://localhost:5173'// front end url
+            }))
+     2.adding server(proxy) in vite.config.js
+            server: {
+                proxy: {
+                    '/api': 'http://localhost:5000'// backend url
+                }
+            }
+     
+       
