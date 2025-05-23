@@ -40,7 +40,7 @@ router.post('/saveBook', async (req, res) => {
 //delete book by id
 // http://localhost:5000/books/deleteBook/:id
 
-router.delete('deleteBook/:id', async(req,res)=>{
+router.delete('/deleteBook/:id', async(req,res)=>{
     try{
         const book=await Book.findByIdAndDelete(req.params.id);
         if(!book){
@@ -52,6 +52,49 @@ router.delete('deleteBook/:id', async(req,res)=>{
         res.status(500).json({message:error.message});
     }
 })
+
+
+//fetchBook by id
+//  http://localhost:5000/books/fetchById/:id
+router.get('/fetchById/:id', async (req, res) => {
+      try{
+        const {id}=req.params; 
+        console.log(id);   
+        const book =await Book.findById(id);
+        if(!book){
+            return res.status(404).json({message:"Book not found"});
+        }
+        res.status(200).json({message:"Book fetched successfully",book});
+      }
+      catch(error){
+        res.status(500).json({message:error.message});
+      }
+})
+
+
+
+//update a book by id
+// http://localhost:5000/books/updateBook/:id
+
+router.put('/updateBook/:id',async(req,res)=>{
+     try{
+       const {id}=req.params
+       const {title,author,genre,price}=req.body;   
+      const updatedBook =await  Book.findByIdAndUpdate(
+        id,
+        {title,author,genre,price},
+        {new:true}
+      )
+      if(!updatedBook){
+        return res.status(404).json({message:"Book not found"});
+      }
+      res.status(200).json({message:"Book updated successfully",book:updatedBook});
+     }
+     catch(error){
+        res.status(500).json({message:error.message});
+     }
+})
+
 
 
 

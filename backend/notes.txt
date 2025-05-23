@@ -1,0 +1,170 @@
+Java:
+-----
+    -java is a programming language
+    -java is a high level language, object oriented language,
+     class based language
+    -java is a platform independent language
+    - we can develop desktop application ,web application, mobile application etc
+
+
+History:
+-------
+    -java was developed in 1991 by  sun micro system 
+              -james gosling(green team)
+              -patrick
+              -Mike
+            
+    -java was introduced in 1995 by james gosling(father of java)
+    -in the year of 1996 they released java 1.0(jdk 1.0)
+         jdk-java development kit
+         jre-java runtime environment
+         jvm-java virtual machine
+
+jdk-it consist of jre  and development tools
+jre-it consist of jvm and set of libraries
+jvm-it consist of bytecode interpreter  , used to execute bytecode
+
+
+
+platform independent:
+---------------------
+     - it means write code once run anywhere(WORA)
+     - to execute a java file we need 
+         1.compiler:
+                   - it is a tool which converts source code into byte code
+                   - ___.java(source code) ----->____.class(bytecode)
+
+         2.interpreter:
+                   - it is a jvm which executes bytecode
+
+Note : java is a platform independent but jvm dependent
+
+java features:
+-------------
+1.platform independent
+2.object oriented:
+               1.inheritance
+               2.polymorphism
+               3.encapsulation
+               4.abstraction
+3.java is simple and easy to learn
+4.java is secure :
+               -no pointers, which eliminate the need for memory management
+               -java has a inbuilt security manager which prevents
+                 unauthorised access to the system
+5.java is robust:
+                 -strong management of memory
+                 -it has a garbage collector which deletes
+                  unused objects
+6.java is multi threaded
+                - supports multi threading, allowing you to run 
+                 multiple tasks at the same time
+7.java is dynamic language and case sensitive
+8.java has rich standard library
+------------------------------------------------------------------------
+
+java structure:
+---------------
+
+   class className{
+    
+    public static void main(String[]args){
+        ------
+        ------
+        ------
+        }
+    }
+
+Note : main method is the entry point of java program
+       without main method java program will not run but we can compile
+         
+-----------------------------------------------------------------------------
+Tokens :
+      - tokens are the basic building blocks of a java program
+      - tokens are used to define the structure of a java program
+      - tokens are the elements of a java program 
+      - types :
+              1.keywords
+                        :inbuilt words and reserved words
+                        :all keywords are in lowercase
+                    ex: public static void if else for while switch case 
+
+              2.identifiers
+                       : names providing by programmer or developer
+                       
+                Rules:(mandatory)
+                       : keywords cannot be used as identifiers
+                       : identifiers are not start with digits and 
+                         special characters except $ and _
+                Conventions:(optional but recommended)
+                       : identifiers should be in camel case
+                       ex: firstNameProgram
+                       : for class/interface name use pascal case
+                       ex: FirstNameProgram
+                       : for method and variable name use snake case/camel case
+                       ex: first_name
+
+              3.literals
+                        : literal is a value/data assigned to a variable
+
+                ex:    int        valueName        =        10
+                     datatype    identifier   assigning   value/literal
+
+Data types:
+           1.primitive data types
+
+                      Number
+                        |
+        ------------------------------------
+        |                                  |
+        Integer                        Decimal
+        |                                  |
+        -----------------------      ----------------   
+    |      |        |         |      |              |                     
+   byte   short    int       long    float        double 
+
+              datatype         size             range
+                1.byte  - 1 byte - 8 bits    -128 to 127
+                2.short - 2 bytes - 16 bits  -32768 to 32767
+                3.int   - 4 bytes - 32 bits  -2147483648 to 2147483647
+                4.long  - 8 bytes - 64 bits  -9223372036854775808 to 9223372036854775807
+                5.float - 4 bytes - 32 bits  -3.4E38 to 3.4E38
+                6.double- 8 bytes - 64 bits  -1.7E308 to 1.7E308
+                7.char  - 2 bytes - 16 bits  -32768 to 32767
+                8.boolean - 1 byte - 8 bits  -true or false
+           2.non primitive data types
+                1.string
+                2.array
+                3.object
+                4.wrapper classes
+                5.enum
+                6.annotation
+                7.Collections
+-----------------------------------------------------------------------------
+variables:
+-----------
+        - variables are used to store data/ values
+
+      based on datatype:  
+        - if we storing primitive datatype then it is called primitive variable
+            int a=10;   (a- primitive variable)
+        - if we storing non primitive datatype then it is called non primitive variable
+            String b="hello";  (b- non primitive variable)
+
+      based on scope:
+        - if we storing variable inside method/constructor then it is called local variable
+         Note : local variable can be accessed only inside method/constructor but not outside
+        - if we storing variable inside class and outside method then it is called global variable
+         Note : global variable can be accessed inside and outside method
+                global variables are two types:   1.static variable
+                     2.instance/non static variable
+                  
+                  
+
+
+
+
+              4.operators
+              5.separators
+Note : tokens are case sensitive
+    

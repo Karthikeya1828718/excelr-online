@@ -9,16 +9,34 @@ const Dashboard = () => {
     const fetchBooks = async () => {
       try {
         const res = await axios.get("http://localhost:5000/books/fetchAllBooks");
-        console.log(res.data.books); // Add this
-        setBooks(res.data.books); // Save data to state
-        console.log(books);
-        
+        console.log(res); 
+         setBooks(res.data.books); 
+        console.log(books);  
       } catch (error) {
         console.log(error);
       }
     };
     fetchBooks();
   }, []);
+
+
+
+
+
+  const handleDelete = (id) =>  (e) => {
+    e.preventDefault();
+    try {
+       axios.delete(`http://localhost:5000/books/deleteBook/${id}`)
+       .then(res=>{
+        alert(res.data.message);
+        window.location.reload();
+       })
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+
 
   return (
     <>
@@ -46,14 +64,12 @@ const Dashboard = () => {
                   <td>{book.genre}</td>
                   <td>{book.price}</td>
                   <td>
-                    <Link to={`/edit/${book._id}`} className="btn btn-sm btn-warning me-2">
+                    <Link to={`/edit/${book._id}/${book.title}/${book.author}/${book.genre}/${book.price}`} className="btn btn-sm btn-warning me-2">
                       Edit
                     </Link>
                      </td>
                      <td>
-                    <button className="btn btn-sm btn-danger" >
-                      Delete
-                    </button>
+                      <button onClick={handleDelete(book._id)} className="btn btn-sm btn-danger">Delete</button>
                  </td>
                 </tr>
               ))
